@@ -1,34 +1,31 @@
-# weepay Opencart Payment Module 
+# weepay PrestaShop 1.7 Payment Module 
 ![](https://service.weepay.co/form/normal.svg)
 
-weepay opencart is the simple and lightweight implementation of [weepay.co](https://www.weepay.co) payment service for Opencart. It's licensed under LGPL v3.0 license, therefore feel free to use it in any project or modify the source code.
+weepay PrestaShop is the simple and lightweight implementation of [weepay.co](https://www.weepay.co) payment service for PrestaShop. It's licensed under LGPL v3.0 license, therefore feel free to use it in any project or modify the source code.
 
 # Getting Started
 
 
   ### Features
   
-  - Supported version  2.3.0.0 - 2.3.X.X;
-  - Other versions [Opencart 1.5.x](https://www.weepay.co)  [Opencart 2.3.x](https://www.weepay.co) [Opencart 3.0.x](https://www.weepay.co)
-  - Supported One Page Checkout
+  - Supported version 1.7.x - 1.7.X.X;
+ 
 
 
 ## Installation
 * Backup your webstore and database
-* Download the source [Opencart 2.3.x Last version releases](https://github.com/weepay/Opencart-2.3/releases/), just copy all the files in the zip to your OpenCart directory.
-* Click Extensions tab and Payments subtab in your OpenCart admin panel.
-* Find weepay extension and install the module. Then click Edit.
+* Download the source PrestaShop
+* Click Extensions tab  PrestaShop admin panel.
+* Find weepay extension and install the module. Then click Configure.
 * Get your api keys from weepay merchant [backend](https://www.pos.weepay.co/)
-* Select "Enabled" to activate weepay plugin for your OpenCart.
+* Select "Enabled" to activate weepay plugin for your PrestaShop.
 * Select Form type "popup" or "responsive" to display form on checkout page.
-* Define alignment number for the payment sort order.(etc 1,2,3...)
 * User on checkout page will find weepay payment extension in payment methods.
-* In order details on admin interface, find "weepay Payment Module" tab in "Order History" section.
 
 #### Notice :
 * PHP 5.6 and later.
 * cURL
-* Opencart 2.3 and later.
+* PrestaShop 1.7 and later.
 
 ### Bug report
 
