@@ -78,7 +78,8 @@ class WeePayCallBackModuleFrontController extends ModuleFrontController
                     'OrderID' => $orderId,
                 );
                 $weepayArray = json_encode($weepayArray, true);
-                $requestResponse = json_decode(weepayRequest::GetPaymentDetail($endpoint, $weepayArray));
+                $weepayEndPoint = "https://api.weepay.co/Payment/GetPaymentDetail";
+                $requestResponse = json_decode(weepayRequest::GetPaymentDetail($weepayEndPoint, $weepayArray));
 
                 if ($requestResponse->Data->PaymentDetail->PaymentStatus == 2 && $requestResponse->Data->PaymentDetail->TrxStatus == 1) {
 
