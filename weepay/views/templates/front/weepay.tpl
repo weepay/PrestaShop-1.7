@@ -128,7 +128,7 @@ $( document ).ready(function() {
 
         $("input[data-module-name='weepay']").click(function () {
               
-          $("button[class='btn btn-primary center-block']").hide();
+          $("#payment-confirmation button").hide();
 
           $("#loadingWeePay").hide();
           $('#weeImage').hide();
