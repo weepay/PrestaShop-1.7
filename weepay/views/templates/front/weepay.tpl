@@ -79,7 +79,7 @@ $( document ).ready(function() {
   if(contractCheck.length == 1) {
 
         $("input[name='payment-option']").click(function () {
-            $("button[class='btn btn-primary center-block']").show();
+          $("#payment-confirmation button").show();
 
             if ($("input[id='conditions_to_approve[terms-and-conditions]']").is(':checked')) {
 
@@ -99,7 +99,7 @@ $( document ).ready(function() {
 
         $("input[data-module-name='weepay']").click(function () {
               
-                $("button[class='btn btn-primary center-block']").hide();
+             $("#payment-confirmation button").hide();
 
                 $("input[id='conditions_to_approve[terms-and-conditions]']").change(function () {
 
@@ -123,7 +123,7 @@ $( document ).ready(function() {
   } else {
 
         $("input[name='payment-option']").click(function () {
-            $("button[class='btn btn-primary center-block']").show();
+          $("#payment-confirmation button").show();
         });
 
         $("input[data-module-name='weepay']").click(function () {
