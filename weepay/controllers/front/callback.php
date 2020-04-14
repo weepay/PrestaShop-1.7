@@ -135,9 +135,9 @@ class WeePayCallBackModuleFrontController extends ModuleFrontController
                         $customer_message->add();
                     }
 
-                    Tools::redirect('index.php?controller=order-confirmation&id_cart=' . $orderId . '&id_module=' . (int) $this->module->id . '&id_order=' . $this->module->currentOrder . '&key=' . $customer->secure_key);
-
                 }
+              Tools::redirect('index.php?controller=order-confirmation&id_cart=' . $orderId . '&id_module=' . (int) $this->module->id . '&id_order=' . $this->module->currentOrder . '&key=' . $customer->secure_key);
+
 
             } else {
 
