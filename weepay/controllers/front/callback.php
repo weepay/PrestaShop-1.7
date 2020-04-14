@@ -46,7 +46,7 @@ class WeePayCallBackModuleFrontController extends ModuleFrontController
                 $errorMessage = $this->l('tokenNotFound');
                 throw new \Exception("Token not found");
             }
-
+            $paymentId = Tools::getValue('paymentId');
             $customerId = (int) $this->context->cookie->id_customer;
             $orderId = (int) $this->context->cookie->id_cart;
             $locale = $this->context->language->iso_code;
@@ -75,7 +75,7 @@ class WeePayCallBackModuleFrontController extends ModuleFrontController
                     'secret-key' => $secretKey,
                 );
                 $weepayArray['Data'] = array(
-                    'OrderID' => $orderId,
+                    'OrderID' => $paymentId,
                 );
                 $weepayArray = json_encode($weepayArray, true);
                 $weepayEndPoint = "https://api.weepay.co/Payment/GetPaymentDetail";
