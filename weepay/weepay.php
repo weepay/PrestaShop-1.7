@@ -362,8 +362,10 @@ class WeePay extends PaymentModule
         }
     }
     public function checkoutFormGenerate($params)
-    {
-        $setCookie = $this->setcookieSameSite("PHPSESSID", $_COOKIE['PHPSESSID'], time() + 86400, "/", $_SERVER['SERVER_NAME'], true, true);
+    {     
+        foreach ($_COOKIE as $name => $value) {
+                $setCookie = $this->setcookieSameSite($name,$_COOKIE[$name], time() + 86400, "/", $_SERVER['SERVER_NAME'],true, true);
+         }
         $this->context->cookie->totalPrice = false;
         $this->context->cookie->installmentFee = false;
 
