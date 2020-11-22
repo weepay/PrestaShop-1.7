@@ -100,7 +100,8 @@ class WeePayCallBackModuleFrontController extends ModuleFrontController
                         /* Invoice false */
                         Configuration::updateValue('PS_INVOICE', false);
                     }
-
+					$installmentMessage = '<br><br><strong style="color:#000;">Tek Çekim: </strong>Toplam ödeme tutarınıza <strong style="color:#000">' . Tools::displayPrice($requestResponse->Data->PaymentDetail->Amount, $currency, false) . ' Taksit </strong>';
+                   
                     $this->module->validateOrder($orderId, Configuration::get('PS_OS_PAYMENT'), $cartTotal, $this->module->displayName, $installmentMessage, $extraVars, $currenyId, false, $customerSecureKey);
                     if (isset($requestResponse->Data->PaymentDetail->InstallmentNumber) && !empty($requestResponse->Data->PaymentDetail->InstallmentNumber) && $requestResponse->Data->PaymentDetail->InstallmentNumber > 1) {
                         /* Invoice true */
