@@ -71,7 +71,7 @@ class WeePay extends PaymentModule
 
         $this->confirmUninstall = $this->l('are you sure ?');
 
-        $this->limited_countries = array('TR', 'FR', 'EN');
+        // $this->limited_countries = array('TR', 'FR', 'EN');
 
         $this->limited_currencies = array('TRY', 'EUR', 'USD', 'GBP');
 
