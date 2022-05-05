@@ -75,7 +75,7 @@ class WeePayCallBackModuleFrontController extends ModuleFrontController
                     'secret-key' => $secretKey,
                 );
                 $weepayArray['Data'] = array(
-                    'OrderID' => $paymentId,
+                    'PaymentID' => $paymentId,
                 );
                 $weepayArray = json_encode($weepayArray, true);
                 $weepayEndPoint = "https://api.weepay.co/Payment/GetPaymentDetail";
